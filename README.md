@@ -1,4 +1,7 @@
-# Create React App Template 입니다.
+# DevCard-maker 입니다.
 
-PWA, 웹 크롤링 등에 쓰이는 파일들을 삭제하고
-웹 프로젝트에 쓰이는 꼭 필요한 파일들만 만들어놓은 Template 입니다.
+간단한 개발자 명함을 만들 수 있는 Web App입니다.
+
+## 사용 기술
+
+## 구조
