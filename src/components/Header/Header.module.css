@@ -1,0 +1,8 @@
+@value baseSpace from '../../common/size.css';
+@value makerLightBlack from '../../common/colors.css';
+
+.title {
+  color: makerLightBlack;
+  font-size: 2rem;
+  padding-left: baseSpace;
+}
