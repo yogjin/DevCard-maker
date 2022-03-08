@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Login.module.css';
-import signInWithRedirectGoogle from '../../services/auth/methods';
+import {
+  signInWithRedirectGoogle,
+  signInWithRedirectGithub,
+} from '../../services/auth/methods';
 
 const Login = (props) => {
   return (
@@ -13,7 +16,10 @@ const Login = (props) => {
         >
           <img src="./image/google.png" alt="image-google" />
         </button>
-        <button className={`${styles.button} ${styles.github}`}>
+        <button
+          className={`${styles.button} ${styles.github}`}
+          onClick={signInWithRedirectGithub}
+        >
           <img src="./image/github.png" alt="image-github" />
         </button>
       </div>
