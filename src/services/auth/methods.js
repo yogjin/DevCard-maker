@@ -1,5 +1,5 @@
 import firebase from '../../config/firebase-config';
-import { getAuth, signInWithRedirect } from 'firebase/auth';
+import { getAuth, signInWithRedirect, getRedirectResult } from 'firebase/auth';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 
 const auth = getAuth(firebase);
@@ -12,4 +12,7 @@ function signInWithRedirectGoogle() {
 function signInWithRedirectGithub() {
   signInWithRedirect(auth, githubAuthProvider);
 }
-export { signInWithRedirectGoogle, signInWithRedirectGithub };
+function getSignInResult() {
+  getRedirectResult(auth).then(console.log);
+}
+export { getSignInResult, signInWithRedirectGoogle, signInWithRedirectGithub };

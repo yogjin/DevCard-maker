@@ -3,9 +3,13 @@ import styles from './Login.module.css';
 import {
   signInWithRedirectGoogle,
   signInWithRedirectGithub,
+  getSignInResult,
 } from '../../services/auth/methods';
 
 const Login = (props) => {
+  useEffect(() => {
+    getSignInResult();
+  }, []);
   return (
     <div className={styles['auth-container']}>
       <span className={styles.text}>Login with</span>
