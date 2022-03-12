@@ -1,4 +1,4 @@
-import firebase from '../../config/firebase-config';
+import firebase from '../config/firebase-config.js';
 import { getAuth, signInWithRedirect, getRedirectResult } from 'firebase/auth';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 

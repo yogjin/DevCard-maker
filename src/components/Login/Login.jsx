@@ -4,7 +4,7 @@ import {
   signInWithRedirectGoogle,
   signInWithRedirectGithub,
   getSignInResult,
-} from '../../services/auth/methods';
+} from '../../services/auth.js';
 
 const Login = (props) => {
   useEffect(() => {
