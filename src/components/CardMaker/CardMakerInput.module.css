@@ -1,0 +1,39 @@
+.line {
+  flex: 1 1 25%;
+  display: flex;
+}
+
+/* 첫번째 줄 */
+.name {
+  flex: 1 1 33%;
+}
+.company {
+  flex: 1 1 33%;
+}
+.color {
+  flex: 1 1 33%;
+}
+
+/* 두번째 줄 */
+.title {
+  flex: 1 1 50%;
+}
+.email {
+  flex: 1 1 50%;
+}
+
+/* 세번째 줄 */
+.message {
+  flex: 1 1 50%;
+}
+.skills {
+  flex: 1 1 50%;
+}
+
+/* 네번째 줄 */
+.image {
+  flex: 1 1 50%;
+}
+.add {
+  flex: 1 1 50%;
+}

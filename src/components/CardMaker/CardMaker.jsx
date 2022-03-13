@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../services/auth';
 import styles from './CardMaker.module.css';
+import CardMakerInput from './CardMakerInput';
 const CardMaker = (props) => {
   const { user, setUser, login, logout } = useAuth();
 
@@ -9,7 +10,9 @@ const CardMaker = (props) => {
       <div className={styles.container}>
         <div className={styles.maker}>
           <span>Card Maker</span>
-          <div className={styles.input}></div>
+          <div className={styles.input}>
+            <CardMakerInput />
+          </div>
         </div>
         <div className={styles.divider}></div>
         <div className={styles.preview}>
