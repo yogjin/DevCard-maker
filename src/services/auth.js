@@ -1,7 +1,13 @@
 import firebase from '../config/firebase-config.js';
-import { getAuth, signInWithRedirect, getRedirectResult } from 'firebase/auth';
+import {
+  getAuth,
+  signInWithRedirect,
+  getRedirectResult,
+  signOut,
+} from 'firebase/auth';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { createContext, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext(null);
 
@@ -11,6 +17,7 @@ const googleAuthProvider = new GoogleAuthProvider();
 const githubAuthProvider = new GithubAuthProvider();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const login = async (method) => {
     let authProvider;
@@ -29,8 +36,10 @@ export const AuthProvider = ({ children }) => {
     // .then(user => setUser(user));
   };
   const logout = () => {
-    //
-    // setUser(null)
+    signOut(auth).then(() => {
+      setUser(null);
+      navigate('/');
+    });
   };
 
   return (

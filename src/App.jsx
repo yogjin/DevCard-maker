@@ -12,7 +12,7 @@ function App() {
   const { user, setUser, login, logout } = useAuth();
   const navigate = useNavigate();
   const containerStyle = user ? styles.cardMaker : styles.login;
-  console.log(containerStyle);
+
   // authContext한테 setUser 넘겨받아서 auth.js에 있는 state인 user에 setUser
   useEffect(() => {
     getRedirectResult(auth).then((result) => {
@@ -31,8 +31,11 @@ function App() {
         </header>
         <main className={styles.login}>
           <Routes>
-            <Route path={'/'} element={<Login />} />
-            <Route path={'/cardMaker'} element={<CardMaker />} />
+            {user ? (
+              <Route path={'/cardMaker'} element={<CardMaker />} />
+            ) : (
+              <Route path={'/'} element={<Login />} />
+            )}
           </Routes>
         </main>
         <footer className={styles.footer}>

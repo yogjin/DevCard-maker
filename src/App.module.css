@@ -22,6 +22,9 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 1rem 1rem 0 0;
   background-color: makerYellow;
   flex: 1 1 5%;
