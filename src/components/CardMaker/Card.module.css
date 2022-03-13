@@ -1,0 +1,15 @@
+.image {
+  flex: 1 1 30%;
+}
+
+.data {
+  flex: 1 1 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.divider {
+  width: 80%;
+  border: 1px solid gray;
+}
