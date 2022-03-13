@@ -32,9 +32,8 @@ export const AuthProvider = ({ children }) => {
         console.error('Auth: No method');
     }
     await signInWithRedirect(auth, authProvider);
-
-    // .then(user => setUser(user));
   };
+
   const logout = () => {
     signOut(auth).then(() => {
       setUser(null);
