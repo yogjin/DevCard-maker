@@ -3,31 +3,33 @@
 
 .app-container {
   border-radius: 1rem;
-  background-color: makerYellow;
-  height: 18rem;
-  width: 32rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: baseSpace;
+}
+.app-container.login {
+  height: 18rem;
+  width: 32rem;
   box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
     rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
     rgb(255, 85, 85) 0px 0px 0px 15px;
 }
 
 /* 로그인 완료 */
-/* .app-container {
+.app-container.cardMaker {
   height: 100vh;
   width: 100vw;
-} */
+}
 
 .header {
-  flex: 1 1 20%;
+  border-radius: 1rem 1rem 0 0;
+  background-color: makerYellow;
+  flex: 1 1 5%;
   padding: baseSpace;
 }
 
 .login {
-  flex: 1 1 70%;
+  flex: 1 1 85%;
   background-color: makerWhite;
   display: flex;
   flex-direction: column;
@@ -35,7 +37,7 @@
 }
 
 .footer {
-  flex: 1 1 5%;
+  flex: 1 1 1%;
   background-color: makerWhite;
   padding-bottom: baseSpace;
   border-radius: 0 0 1rem 1rem;

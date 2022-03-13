@@ -11,7 +11,8 @@ import { auth, useAuth } from './services/auth.js';
 function App() {
   const { user, setUser, login, logout } = useAuth();
   const navigate = useNavigate();
-
+  const containerStyle = user ? styles.cardMaker : styles.login;
+  console.log(containerStyle);
   // authContext한테 setUser 넘겨받아서 auth.js에 있는 state인 user에 setUser
   useEffect(() => {
     getRedirectResult(auth).then((result) => {
@@ -24,7 +25,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className={styles['app-container']}>
+      <div className={`${styles['app-container']} ${containerStyle}`}>
         <header className={styles.header}>
           <Header />
         </header>
