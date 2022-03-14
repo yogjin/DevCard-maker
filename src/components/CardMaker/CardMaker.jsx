@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../services/auth';
 import styles from './CardMaker.module.css';
 import CardMakerInput from './CardMakerInput';
+import Card from './Card';
+import { getCards, getData } from '../../services/database';
+
 const CardMaker = (props) => {
   const { user, setUser, login, logout } = useAuth();
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    getCards(user.uid).then((card) => {
+      console.log(card);
+      setCards((cards) => [card]);
+    });
+  }, []);
 
   return (
     <>
@@ -17,7 +28,11 @@ const CardMaker = (props) => {
         <div className={styles.divider}></div>
         <div className={styles.preview}>
           <span>Preview</span>
-          <div className={styles.card}></div>
+          {cards.map((card, index) => (
+            <div key={index} className={styles.card}>
+              <Card card={card} />
+            </div>
+          ))}
         </div>
       </div>
     </>
