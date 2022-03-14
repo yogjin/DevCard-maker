@@ -36,7 +36,7 @@ export const pushData = () => {
       message: 'go higher',
       name: '영진',
       skills: ['javascript', 'react'],
-      title: 'BackEnd22234',
+      title: 'BackEnd Developer',
     },
   });
 };
@@ -61,7 +61,7 @@ export const getData = async () => {
 // uid에 해당하는 card object 가져오기
 export const getCards = async (uid) => {
   let data;
-  onValue(ref(db, `users/${uid}`), (snapshot) => {
+  await onValue(ref(db, `users/${uid}`), (snapshot) => {
     data = snapshot.val();
   });
   return data['card'];
