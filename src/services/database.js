@@ -18,12 +18,10 @@ import { child, get, getDatabase, onValue, ref, set } from 'firebase/database';
 const db = getDatabase();
 
 // function for test
-export const pushData2 = (uid, cardData, changedData) => {
+export const pushData2 = (uid, changedData) => {
+  console.log('pushData2');
   set(ref(db, `users/${uid}`), {
-    card: {
-      ...cardData,
-      ...changedData,
-    },
+    card: changedData,
   });
 };
 
@@ -61,8 +59,16 @@ export const getData = async () => {
 // uid에 해당하는 card object 가져오기
 export const getCards = async (uid) => {
   let data;
-  await onValue(ref(db, `users/${uid}`), (snapshot) => {
-    data = snapshot.val();
-  });
+  await get(ref(db, `users/${uid}`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        data = snapshot.val();
+      } else {
+        console.log('No data available');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   return data['card'];
 };
