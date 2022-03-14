@@ -33,4 +33,5 @@
   height: 10rem;
   width: 95%;
   border: 1px solid;
+  display: flex;
 }
