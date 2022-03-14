@@ -1,23 +1,65 @@
 import React from 'react';
 import styles from './CardMakerInput.module.css';
 
-const CardMakerInput = (props) => {
+const CardMakerInput = ({ card, handleInputChange }) => {
+  const { name, company, title, email, message } = card;
+
+  const handleChange = (e, key) => {
+    const changedCard = { ...card, [key]: e.target.value };
+    handleInputChange(changedCard);
+  };
+
   return (
     <>
       <div className={styles.line}>
-        <input className={styles.name} placeholder="name"></input>
-        <input className={styles.company} placeholder="company"></input>
+        <input
+          className={styles.name}
+          placeholder="name"
+          value={name}
+          onChange={(e) => {
+            handleChange(e, 'name');
+          }}
+        ></input>
+        <input
+          className={styles.company}
+          placeholder="company"
+          value={company}
+          onChange={(e) => {
+            handleChange(e, 'company');
+          }}
+        ></input>
         <select className={styles.color}>
           <option value="black">black</option>
           <option value="black">white</option>
         </select>
       </div>
       <div className={styles.line}>
-        <input className={styles.title} placeholder="title"></input>
-        <input className={styles.email} placeholder="email"></input>
+        <input
+          className={styles.title}
+          placeholder="title"
+          value={title}
+          onChange={(e) => {
+            handleChange(e, 'title');
+          }}
+        ></input>
+        <input
+          className={styles.email}
+          placeholder="email"
+          value={email}
+          onChange={(e) => {
+            handleChange(e, 'email');
+          }}
+        ></input>
       </div>
       <div className={styles.line}>
-        <input className={styles.message} placeholder="message"></input>
+        <input
+          className={styles.message}
+          placeholder="message"
+          value={message}
+          onChange={(e) => {
+            handleChange(e, 'message');
+          }}
+        ></input>
         <input className={styles.skills} placeholder="skills"></input>
       </div>
       <div className={styles.line}>
