@@ -2,15 +2,16 @@ import { child, get, getDatabase, onValue, ref, set } from 'firebase/database';
 
 // db구조
 // {
-//   "users": {
-//     "id": "FeAYOxvRNHYv08GQPWvKyHborAC3", // uid
-//     "card": {
-//       "company": "CNU",
-//       "email": "youngjin988@gmail.com",
-//       "message": "go higher",
-//       "name": "영진",
-//       "skills": ["javascript", "react"],
-//       "title": "FrontEnd Developer"
+//   "users" : {
+//     "uid" : {
+//       "card" : {
+//         "company" : "",
+//         "email" : "",
+//         "message" : "",
+//         "name" : "",
+//         "skills" : [ "javascript", "react" ],
+//         "title" : ""
+//       }
 //     }
 //   }
 // }
