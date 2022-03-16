@@ -25,6 +25,23 @@ export const pushData = (uid, changedData) => {
   });
 };
 
+const getInitialCardObjectOfUser = () => {
+  return {
+    card: {
+      company: 'company',
+      email: 'email',
+      message: 'message',
+      name: 'name',
+      skills: [],
+      title: 'title',
+    },
+  };
+};
+
+const pushInitialCardObject = (uid, InitialCardObject) => {
+  set(ref(db, `users/${uid}`), InitialCardObject);
+};
+
 // uid에 해당하는 card object 가져오기
 export const getCards = async (uid) => {
   let data;
@@ -33,7 +50,9 @@ export const getCards = async (uid) => {
       if (snapshot.exists()) {
         data = snapshot.val();
       } else {
-        console.log('No data available');
+        const initialCardObject = getInitialCardObjectOfUser();
+        pushInitialCardObject(uid, initialCardObject);
+        data = initialCardObject;
       }
     })
     .catch((error) => {
