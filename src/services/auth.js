@@ -1,10 +1,9 @@
 import firebase from '../config/firebase-config.js';
 import {
   getAuth,
-  signInWithRedirect,
-  getRedirectResult,
   signOut,
   onAuthStateChanged,
+  signInWithPopup,
 } from 'firebase/auth';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -42,7 +41,7 @@ export const AuthProvider = ({ children }) => {
       default:
         console.error('Auth: No method');
     }
-    await signInWithRedirect(auth, authProvider);
+    await signInWithPopup(auth, authProvider);
   };
 
   const logout = () => {
