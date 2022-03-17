@@ -4,9 +4,10 @@ import {
   signInWithRedirect,
   getRedirectResult,
   signOut,
+  onAuthStateChanged,
 } from 'firebase/auth';
 import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext(null);
@@ -18,6 +19,16 @@ const githubAuthProvider = new GithubAuthProvider();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      // 로그인 성공
+      if (user) {
+        setUser(user);
+        navigate('/cardMaker');
+      }
+    });
+  }, []);
 
   const login = async (method) => {
     let authProvider;
