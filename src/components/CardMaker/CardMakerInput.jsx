@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CardMakerInput.module.css';
 
 const CardMakerInput = ({ card, handleInputChange }) => {
-  const { name, company, title, email, message } = card;
+  const { name, company, title, email, message, color } = card;
 
   const handleChange = (e, key) => {
     const changedCard = { ...card, [key]: e.target.value };
@@ -28,9 +28,15 @@ const CardMakerInput = ({ card, handleInputChange }) => {
             handleChange(e, 'company');
           }}
         ></input>
-        <select className={styles.color}>
+        <select
+          className={styles.color}
+          onChange={(e) => {
+            handleChange(e, 'color');
+          }}
+          defaultValue={color}
+        >
           <option value="black">black</option>
-          <option value="black">white</option>
+          <option value="white">white</option>
         </select>
       </div>
       <div className={styles.line}>
