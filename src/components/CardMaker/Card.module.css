@@ -3,19 +3,14 @@
 .name {
   font-weight: bold;
   font-size: 1.2rem;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   color: #5673ebff;
 }
 
-.codeSpan {
-  font-family: monospace;
-  margin: 0;
+.infoCode {
   color: #eb5374;
 }
-pre {
-  margin: 0;
-}
+
 .left {
   flex: 50%;
   font-size: 1rem;

@@ -1,41 +1,45 @@
 import React from 'react';
 import styles from './Card.module.css';
 
+const CodeInCardWithBrTag = ({ code }) => {
+  return (
+    <>
+      <code>{code}</code>
+      <br />
+    </>
+  );
+};
+
 const Card = ({ card }) => {
   const { name, company, title, email, message } = card;
   const leftCode = (
     <>
-      <pre>{`{
-`}</pre>
-      <span className={styles.codeSpan}>
+      <CodeInCardWithBrTag code={'{'} />
+      <code className={styles.infoCode}>
         &nbsp;&nbsp;&nbsp;&nbsp;{title}
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;{company}
-      </span>
-      <pre>{`}
-`}</pre>
-      <pre>{`
-<email>
-`}</pre>
-      <span className={styles.codeSpan}>&nbsp;&nbsp;&nbsp;&nbsp;{email}</span>
-      <pre>{`<email/>        
-<br/>
-<message>
-`}</pre>
-      <span className={styles.codeSpan}>
-        &nbsp;&nbsp;&nbsp;&nbsp;{`${message}`}
-      </span>
-      <pre>{`<message>
-      `}</pre>
+      </code>
+      <br />
+      <CodeInCardWithBrTag code={'}'} />
+      <br />
+      <CodeInCardWithBrTag code={'<br/>'} />
+      <code>{`<email/> `} </code>
+      <code className={styles.infoCode}>{email}</code>
+      <br />
+      <CodeInCardWithBrTag code={'<br/>'} />
+      <CodeInCardWithBrTag code={'<br/>'} />
+      <code>{`<message/> `}</code>
+      <code className={styles.infoCode}>{message}</code>
     </>
   );
   const rightCode = (
-    <pre>{`
-  <skills>
-
-
-  </skills> 
-  `}</pre>
+    <>
+      <CodeInCardWithBrTag code={'<skills>'} />
+      <code>&nbsp;&nbsp;&nbsp;&nbsp;javascript</code>
+      <br />
+      <CodeInCardWithBrTag code={'<skills/>'} />
+    </>
   );
 
   return (
