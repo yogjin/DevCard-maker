@@ -39,7 +39,7 @@ const CardMaker = (props) => {
         <div className={styles.preview}>
           <span>Preview</span>
           {cards.map((card, index) => (
-            <div key={index} className={styles.card}>
+            <div key={index} className={`${styles.card} ${styles[card.color]}`}>
               <Card card={card} />
             </div>
           ))}
