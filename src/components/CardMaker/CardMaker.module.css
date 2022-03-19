@@ -1,4 +1,6 @@
 @value baseSpace from '../../common/size.css';
+@value makerShadow from '../../common/colors.css';
+
 .container {
   display: flex;
 }
@@ -30,8 +32,10 @@
 }
 .card {
   margin-top: baseSpace;
-  height: 10rem;
   width: 95%;
   border: 1px solid;
   display: flex;
+  align-items: center;
+  padding: baseSpace calc(baseSpace * 4);
+  box-shadow: makerShadow;
 }

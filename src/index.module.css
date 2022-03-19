@@ -3,7 +3,6 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -13,4 +12,5 @@ body {
   height: 100vh;
   margin: 0;
   background-color: makerLightBlack;
+  font-family: 'Ubuntu', sans-serif;
 }

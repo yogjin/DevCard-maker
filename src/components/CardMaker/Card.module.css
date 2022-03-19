@@ -1,15 +1,25 @@
-.image {
-  flex: 1 1 30%;
+@value baseSpace from '../../common/size.css';
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-.data {
-  flex: 1 1 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.left {
+  flex: 50%;
+  font-size: 1rem;
 }
 
-.divider {
-  width: 80%;
-  border: 1px solid gray;
+.right {
+  flex: 50%;
+  font-size: 1rem;
+  padding-left: calc(baseSpace * 2);
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile > img {
+  width: 10rem;
 }
