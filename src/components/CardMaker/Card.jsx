@@ -4,23 +4,35 @@ import styles from './Card.module.css';
 const Card = ({ card }) => {
   const { name, company, title, email, message } = card;
   const leftCode = (
-    <pre>{`{  
-    ${title}
-    ${company}
-}
-
-
-<br/>
-<email/> ${email}
-<br/>
-<br/>
-<message/> ${message}
+    <>
+      <pre>{`{
 `}</pre>
+      <span className={styles.codeSpan}>
+        &nbsp;&nbsp;&nbsp;&nbsp;{title}
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;{company}
+      </span>
+      <pre>{`}
+`}</pre>
+      <pre>{`
+<email>
+`}</pre>
+      <span className={styles.codeSpan}>&nbsp;&nbsp;&nbsp;&nbsp;{email}</span>
+      <pre>{`<email/>        
+<br/>
+<message>
+`}</pre>
+      <span className={styles.codeSpan}>
+        &nbsp;&nbsp;&nbsp;&nbsp;{`${message}`}
+      </span>
+      <pre>{`<message>
+      `}</pre>
+    </>
   );
   const rightCode = (
     <pre>{`
   <skills>
-  
+
 
   </skills> 
   `}</pre>
