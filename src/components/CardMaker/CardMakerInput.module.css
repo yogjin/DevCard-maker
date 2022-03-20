@@ -1,9 +1,14 @@
 @value makerShadow from '../../common/colors.css';
+@value baseSpace from '../../common/size.css';
+
 .line {
   flex: 1 1 25%;
   display: flex;
 }
-
+input,
+select {
+  font-size: 1rem;
+}
 /* 첫번째 줄 */
 .name {
   flex: 1 1 33%;
@@ -44,6 +49,7 @@
   color: white;
   cursor: pointer;
   box-shadow: 1px 4px 0 rgb(0, 0, 0, 0.5);
+  margin-top: calc(baseSpace * 0.5);
 }
 .fileUploadButton:active {
   box-shadow: none;

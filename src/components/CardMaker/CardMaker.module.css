@@ -3,7 +3,9 @@
 
 .container {
   display: flex;
-  align-items: center;
+}
+.title {
+  font-size: 1.5rem;
 }
 .maker {
   flex: 1 1 50%;
@@ -15,7 +17,6 @@
   margin-top: baseSpace;
   height: 10rem;
   width: 95%;
-  border: 1px solid;
   display: flex;
   flex-direction: column;
 }

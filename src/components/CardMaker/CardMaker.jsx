@@ -25,7 +25,7 @@ const CardMaker = (props) => {
     <>
       <div className={styles.container}>
         <div className={styles.maker}>
-          <span>Card Maker</span>
+          <span className={styles.title}>Card Maker</span>
           {cards.map((card, index) => (
             <div key={index} className={styles.input}>
               <CardMakerInput
@@ -37,7 +37,7 @@ const CardMaker = (props) => {
         </div>
         <div className={styles.divider}></div>
         <div className={styles.preview}>
-          <span>Preview</span>
+          <span className={styles.title}>Preview</span>
           {cards.map((card, index) => (
             <div key={index} className={`${styles.card} ${styles[card.color]}`}>
               <Card card={card} />
