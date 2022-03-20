@@ -88,10 +88,13 @@ const CardMakerInput = ({ card, handleInputChange }) => {
         ></input>
       </div>
       <div className={styles.line}>
-        <div className={styles.image}>image</div>
+        <label for="file" className={styles.fileUploadButton}>
+          프로필 업로드
+        </label>
         <input
+          id="file"
+          className={styles.fileUploadInput}
           type="file"
-          className={styles.add}
           onChange={handleUploadImage}
         />
       </div>

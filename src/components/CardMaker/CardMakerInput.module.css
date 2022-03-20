@@ -1,3 +1,4 @@
+@value makerShadow from '../../common/colors.css';
 .line {
   flex: 1 1 25%;
   display: flex;
@@ -34,6 +35,23 @@
 .image {
   flex: 1 1 50%;
 }
-.add {
+.fileUploadButton {
+  border: 1px solid;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(222, 118, 63);
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 4px 0 rgb(0, 0, 0, 0.5);
+}
+.fileUploadButton:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.1rem;
+  left: 0.1rem;
+}
+.fileUploadInput {
   flex: 1 1 50%;
+  display: none;
 }

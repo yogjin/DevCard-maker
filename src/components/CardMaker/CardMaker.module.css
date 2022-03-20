@@ -3,6 +3,7 @@
 
 .container {
   display: flex;
+  align-items: center;
 }
 .maker {
   flex: 1 1 50%;
