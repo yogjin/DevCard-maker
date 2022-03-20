@@ -1,11 +1,23 @@
 import React from 'react';
+import { uploadImage } from '../../services/image_uploader';
 import styles from './CardMakerInput.module.css';
 
 const CardMakerInput = ({ card, handleInputChange }) => {
-  const { name, company, title, email, message, color, skills } = card;
+  const { name, company, title, email, message, color, skills, url } = card;
 
   const handleChange = (e, key) => {
     const changedCard = { ...card, [key]: e.target.value };
+    handleInputChange(changedCard);
+  };
+
+  const handleUploadImage = async (e) => {
+    e.preventDefault();
+    if (e.target.files.length === 0) {
+      return;
+    }
+    const file = e.target.files[0];
+    const imageUrl = await uploadImage(file);
+    const changedCard = { ...card, url: imageUrl };
     handleInputChange(changedCard);
   };
 
@@ -77,7 +89,11 @@ const CardMakerInput = ({ card, handleInputChange }) => {
       </div>
       <div className={styles.line}>
         <div className={styles.image}>image</div>
-        <div className={styles.add}>Add</div>
+        <input
+          type="file"
+          className={styles.add}
+          onChange={handleUploadImage}
+        />
       </div>
     </>
   );

@@ -11,7 +11,7 @@ const CodeInCardWithBrTag = ({ code }) => {
 };
 
 const Card = ({ card }) => {
-  const { name, company, title, email, message, skills } = card;
+  const { name, company, title, email, message, skills, url } = card;
   const leftCode = (
     <>
       <CodeInCardWithBrTag code={'{'} />
@@ -50,7 +50,7 @@ const Card = ({ card }) => {
       </div>
       <div className={styles.right}>
         <div className={styles.profile}>
-          <img src="./image/github.png" alt="profile"></img>
+          <img src={url} alt="profile"></img>
         </div>
         <div>{rightCode}</div>
       </div>

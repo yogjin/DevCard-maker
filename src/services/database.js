@@ -12,6 +12,7 @@ import { child, get, getDatabase, onValue, ref, set } from 'firebase/database';
 //         "skills" : "",
 //         "title" : "",
 //         "color": ""
+//         "url":""
 //       }
 //     }
 //   }
@@ -36,6 +37,7 @@ const getInitialCardObjectOfUser = () => {
       skills: 'skills',
       title: 'title',
       color: 'black',
+      url: '',
     },
   };
 };
