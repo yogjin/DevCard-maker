@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CardMakerInput.module.css';
 
 const CardMakerInput = ({ card, handleInputChange }) => {
-  const { name, company, title, email, message, color } = card;
+  const { name, company, title, email, message, color, skills } = card;
 
   const handleChange = (e, key) => {
     const changedCard = { ...card, [key]: e.target.value };
@@ -66,7 +66,14 @@ const CardMakerInput = ({ card, handleInputChange }) => {
             handleChange(e, 'message');
           }}
         ></input>
-        <input className={styles.skills} placeholder="skills"></input>
+        <input
+          className={styles.skills}
+          placeholder="skills"
+          value={skills}
+          onChange={(e) => {
+            handleChange(e, 'skills');
+          }}
+        ></input>
       </div>
       <div className={styles.line}>
         <div className={styles.image}>image</div>

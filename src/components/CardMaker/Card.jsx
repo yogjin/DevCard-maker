@@ -11,7 +11,7 @@ const CodeInCardWithBrTag = ({ code }) => {
 };
 
 const Card = ({ card }) => {
-  const { name, company, title, email, message } = card;
+  const { name, company, title, email, message, skills } = card;
   const leftCode = (
     <>
       <CodeInCardWithBrTag code={'{'} />
@@ -36,7 +36,7 @@ const Card = ({ card }) => {
   const rightCode = (
     <>
       <CodeInCardWithBrTag code={'<skills>'} />
-      <code>&nbsp;&nbsp;&nbsp;&nbsp;javascript</code>
+      <code className={styles.infoCode}>&nbsp;&nbsp;&nbsp;&nbsp;{skills}</code>
       <br />
       <CodeInCardWithBrTag code={'<skills/>'} />
     </>

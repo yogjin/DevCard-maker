@@ -9,7 +9,7 @@ import { child, get, getDatabase, onValue, ref, set } from 'firebase/database';
 //         "email" : "",
 //         "message" : "",
 //         "name" : "",
-//         "skills" : [ "javascript", "react" ],
+//         "skills" : "",
 //         "title" : "",
 //         "color": ""
 //       }
@@ -33,7 +33,7 @@ const getInitialCardObjectOfUser = () => {
       email: 'email',
       message: 'message',
       name: 'name',
-      skills: [],
+      skills: 'skills',
       title: 'title',
       color: 'black',
     },
