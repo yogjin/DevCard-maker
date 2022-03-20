@@ -16,7 +16,6 @@ const CardMaker = (props) => {
 
   useEffect(() => {
     getCards(user.uid).then((card) => {
-      console.log(card);
       setCards((cards) => [card]);
     });
   }, []);
