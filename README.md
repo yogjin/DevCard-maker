@@ -7,9 +7,15 @@ https://devcarrrd.netlify.app/cardMaker
 ## 사용 기술
 
 React
-postcss-modules, postcss-module-values
+
+postcss-modules
+
+postcss-module-values
+
 firebase: OAuth(google, github)
+
 react-router-dom
-Cloudinary
+
+Cloudinary (Card Profile)
 
 ## 구조
