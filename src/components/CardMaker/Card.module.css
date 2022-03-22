@@ -1,0 +1,32 @@
+@value baseSpace from '../../common/size.css';
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #5673ebff;
+}
+
+.infoCode {
+  color: #eb5374;
+}
+
+.left {
+  flex: 50%;
+  font-size: 1rem;
+}
+
+.right {
+  flex: 50%;
+  font-size: 1rem;
+  padding-left: calc(baseSpace * 2);
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile > img {
+  width: 10rem;
+  border-radius: 100%;
+}

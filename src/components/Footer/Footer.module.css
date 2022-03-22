@@ -1,0 +1,5 @@
+@value baseSpace from '../../common/size.css';
+
+.copytight {
+  padding-left: baseSpace;
+}

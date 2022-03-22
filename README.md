@@ -4,4 +4,10 @@
 
 ## 사용 기술
 
+React
+postcss-modules, postcss-module-values
+firebase: OAuth(google, github)
+react-router-dom
+Cloudinary
+
 ## 구조

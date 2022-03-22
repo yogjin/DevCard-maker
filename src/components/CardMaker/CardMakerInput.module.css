@@ -1,0 +1,63 @@
+@value makerShadow from '../../common/colors.css';
+@value baseSpace from '../../common/size.css';
+
+.line {
+  flex: 1 1 25%;
+  display: flex;
+}
+input,
+select {
+  font-size: 1rem;
+}
+/* 첫번째 줄 */
+.name {
+  flex: 1 1 33%;
+}
+.company {
+  flex: 1 1 33%;
+}
+.color {
+  flex: 1 1 33%;
+}
+
+/* 두번째 줄 */
+.title {
+  flex: 1 1 50%;
+}
+.email {
+  flex: 1 1 50%;
+}
+
+/* 세번째 줄 */
+.message {
+  flex: 1 1 50%;
+}
+.skills {
+  flex: 1 1 50%;
+}
+
+/* 네번째 줄 */
+.image {
+  flex: 1 1 50%;
+}
+.fileUploadButton {
+  border: 1px solid;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(222, 118, 63);
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 4px 0 rgb(0, 0, 0, 0.5);
+  margin-top: calc(baseSpace * 0.5);
+}
+.fileUploadButton:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.1rem;
+  left: 0.1rem;
+}
+.fileUploadInput {
+  flex: 1 1 50%;
+  display: none;
+}
