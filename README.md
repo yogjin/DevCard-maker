@@ -19,6 +19,7 @@ react-router-dom
 Cloudinary (Card Profile)
 
 ## 구조
+```
 📦src
  ┣ 📂common
  ┃ ┣ 📜colors.css
@@ -51,3 +52,4 @@ Cloudinary (Card Profile)
  ┣ 📜App.module.css
  ┣ 📜index.js
  ┗ 📜index.module.css
+```
