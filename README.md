@@ -19,3 +19,35 @@ react-router-dom
 Cloudinary (Card Profile)
 
 ## 구조
+📦src
+ ┣ 📂common
+ ┃ ┣ 📜colors.css
+ ┃ ┗ 📜size.css
+ ┣ 📂components
+ ┃ ┣ 📂CardMaker
+ ┃ ┃ ┣ 📜Card.jsx
+ ┃ ┃ ┣ 📜Card.module.css
+ ┃ ┃ ┣ 📜CardMaker.jsx
+ ┃ ┃ ┣ 📜CardMaker.module.css
+ ┃ ┃ ┣ 📜CardMakerInput.jsx
+ ┃ ┃ ┗ 📜CardMakerInput.module.css
+ ┃ ┣ 📂Footer
+ ┃ ┃ ┣ 📜Footer.jsx
+ ┃ ┃ ┗ 📜Footer.module.css
+ ┃ ┣ 📂Header
+ ┃ ┃ ┣ 📜Header.jsx
+ ┃ ┃ ┗ 📜Header.module.css
+ ┃ ┣ 📂Login
+ ┃ ┃ ┣ 📜Login.jsx
+ ┃ ┃ ┗ 📜Login.module.css
+ ┃ ┗ 📜README.md
+ ┣ 📂config
+ ┃ ┗ 📜firebase-config.js
+ ┣ 📂services
+ ┃ ┣ 📜auth.js
+ ┃ ┣ 📜database.js
+ ┃ ┗ 📜image_uploader.js
+ ┣ 📜App.jsx
+ ┣ 📜App.module.css
+ ┣ 📜index.js
+ ┗ 📜index.module.css
