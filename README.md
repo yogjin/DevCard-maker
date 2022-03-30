@@ -2,7 +2,7 @@
 
 간단한 개발자 명함을 만들 수 있는 Web App입니다.
 
-https://devcarrrd.netlify.app/cardMaker
+https://devcarrrd.netlify.app/
 
 ## 사용 기술
 
