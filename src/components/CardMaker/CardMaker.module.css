@@ -52,3 +52,17 @@
 .card.white {
   background-color: makerWhite;
 }
+
+.downloadBtn {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: 300ms;
+}
+.downloadBtn:hover {
+  transform: scale(1.2);
+}
+.downloadBtn > i {
+  font-size: 1.4rem;
+}
