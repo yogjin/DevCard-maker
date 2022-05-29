@@ -12,6 +12,8 @@ postcss-modules
 
 postcss-module-values
 
+html-to-image
+
 firebase: OAuth(google, github)
 
 react-router-dom
