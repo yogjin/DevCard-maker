@@ -6,19 +6,19 @@ https://devcarrrd.netlify.app/
 
 ## 사용 기술
 
-React
+React, Javascript (Rendering, Logic)
 
-postcss-modules
+postcss-modules, postcss-module-values (style)
 
-postcss-module-values
-
-html-to-image
+html-to-image (Download Devcard)
 
 firebase: OAuth(google, github)
 
 react-router-dom
 
-Cloudinary (Card Profile)
+Cloudinary (Store Card Profile)
+
+netlify (deployment web server)
 
 ## 구조
 ```
@@ -56,13 +56,16 @@ Cloudinary (Card Profile)
  ┗ 📜index.module.css
 ```
 
-## How to use
+## 이용 방법
 
 ### 1. Google 또는 Github 계정으로 로그인
-![스크린샷 2022-05-29 오후 5 18 52](https://user-images.githubusercontent.com/33623078/170858934-abf0735f-e5c1-4719-a27e-797988944361.jpg)
+<img width="1475" alt="image" src="https://user-images.githubusercontent.com/33623078/170909039-328f98b6-2cda-4396-8ca7-a0e8e37892c0.png">
 
 ### 2. input에 정보를 입력하여 카드 작성
+<img width="1437" alt="image" src="https://user-images.githubusercontent.com/33623078/170909180-1e73b33d-579a-403e-96b1-296831e22563.png">
 
 ### 3. 프로필 업로드 버튼으로 이미지 업로드
+<img width="1475" alt="image" src="https://user-images.githubusercontent.com/33623078/170908803-a47569d3-d991-4d4a-961f-2f21242e6d42.png">
 
-### 4. dev card jpg 다운로드 가능
+### 4. DevCard.jpg 다운로드
+<img width="1475" alt="image" src="https://user-images.githubusercontent.com/33623078/170909249-7c44a659-5161-4add-a5a0-7ae216acae3b.png">
