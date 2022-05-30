@@ -1,4 +1,4 @@
-# DevCard-maker 입니다.
+# DevCard-maker
 
 간단한 개발자 명함을 만들 수 있는 Web App입니다.
 
