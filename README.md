@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5bc28dce-331c-4034-86f0-f1be0ccbefa2/deploy-status)](https://app.netlify.com/sites/devcarrrd/deploys)
 # DevCard-maker
 
-간단한 개발자 명함을 만들 수 있는 Web App입니다.
+간단한 개발자 명함을 만들고, 다운로드 받을 수 있습니다.
 
 https://devcarrrd.netlify.app/
 
